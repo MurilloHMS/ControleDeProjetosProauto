@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ControleDeProjetosProauto.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,8 @@ namespace ControleDeProjetosProauto.Setup.DataBase
     internal class ControleContext : DbContext
     {
         private string _connectionString;
+
+        public DbSet<Projetos> projetos { get; set; }
         public ControleContext()
         {
             string dbDiretorio = Path.Combine(Directory.GetCurrentDirectory(), "db");

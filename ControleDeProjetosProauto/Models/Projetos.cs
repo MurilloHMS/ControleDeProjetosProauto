@@ -14,8 +14,9 @@ namespace ControleDeProjetosProauto.Models
         public DateTime PRODDATCAD {  get; set; }
         [Required]
         public string PROSDESPRO { get; set; }
-        public char PROCSTAT {get; set; }
-        public string PROSOBRIG { get; set; }
+        [Required]
+        public char PROCSTAT { get; set; } = 'A';
+        public string? PROSOBRIG { get; set; }
 
     }
 

@@ -1,6 +1,6 @@
 ﻿namespace ControleDeProjetosProauto
 {
-    partial class Form1
+    partial class Frm_Home
     {
         /// <summary>
         ///  Required designer variable.

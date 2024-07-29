@@ -28,49 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
+            btnInserir = new Button();
+            cbStatusProjeto = new ComboBox();
+            tbID = new TextBox();
             label1 = new Label();
             groupBox1 = new GroupBox();
+            tbDescritivo = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
+            tbNomeProjeto = new TextBox();
             label3 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            textBox3 = new TextBox();
+            dtpDataCadastro = new DateTimePicker();
+            tbObrigacoes = new TextBox();
             label4 = new Label();
-            textBox4 = new TextBox();
             label5 = new Label();
             groupBox2 = new GroupBox();
-            button2 = new Button();
-            button3 = new Button();
+            btnBusca = new Button();
+            btnDeletar = new Button();
+            btnAtualizar = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
-            // button1
+            // btnInserir
             // 
-            button1.Location = new Point(38, 416);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 3;
-            button1.Text = "Inserir";
-            button1.UseVisualStyleBackColor = true;
+            btnInserir.Location = new Point(38, 416);
+            btnInserir.Name = "btnInserir";
+            btnInserir.Size = new Size(75, 23);
+            btnInserir.TabIndex = 3;
+            btnInserir.Text = "Inserir";
+            btnInserir.UseVisualStyleBackColor = true;
+            btnInserir.Click += btnInserir_Click;
             // 
-            // comboBox1
+            // cbStatusProjeto
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(16, 169);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(264, 23);
-            comboBox1.TabIndex = 2;
+            cbStatusProjeto.FormattingEnabled = true;
+            cbStatusProjeto.Items.AddRange(new object[] { "Iniciar", "Em andamento", "Finalizado" });
+            cbStatusProjeto.Location = new Point(16, 169);
+            cbStatusProjeto.Name = "cbStatusProjeto";
+            cbStatusProjeto.Size = new Size(264, 23);
+            cbStatusProjeto.TabIndex = 2;
             // 
-            // textBox1
+            // tbID
             // 
-            textBox1.Location = new Point(16, 55);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(62, 23);
-            textBox1.TabIndex = 1;
+            tbID.Location = new Point(16, 55);
+            tbID.Name = "tbID";
+            tbID.Size = new Size(62, 23);
+            tbID.TabIndex = 1;
             // 
             // label1
             // 
@@ -83,13 +86,21 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(tbDescritivo);
             groupBox1.Location = new Point(328, 22);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(374, 457);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Descritivo";
+            // 
+            // tbDescritivo
+            // 
+            tbDescritivo.Location = new Point(21, 34);
+            tbDescritivo.Multiline = true;
+            tbDescritivo.Name = "tbDescritivo";
+            tbDescritivo.Size = new Size(337, 405);
+            tbDescritivo.TabIndex = 1;
             // 
             // label2
             // 
@@ -100,12 +111,12 @@
             label2.TabIndex = 0;
             label2.Text = "Nome do Projeto";
             // 
-            // textBox2
+            // tbNomeProjeto
             // 
-            textBox2.Location = new Point(16, 110);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(264, 23);
-            textBox2.TabIndex = 1;
+            tbNomeProjeto.Location = new Point(16, 110);
+            tbNomeProjeto.Name = "tbNomeProjeto";
+            tbNomeProjeto.Size = new Size(264, 23);
+            tbNomeProjeto.TabIndex = 1;
             // 
             // label3
             // 
@@ -116,21 +127,21 @@
             label3.TabIndex = 0;
             label3.Text = "Data de Cadastro";
             // 
-            // dateTimePicker1
+            // dtpDataCadastro
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(183, 55);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(97, 23);
-            dateTimePicker1.TabIndex = 5;
+            dtpDataCadastro.Format = DateTimePickerFormat.Short;
+            dtpDataCadastro.Location = new Point(183, 55);
+            dtpDataCadastro.Name = "dtpDataCadastro";
+            dtpDataCadastro.Size = new Size(97, 23);
+            dtpDataCadastro.TabIndex = 5;
             // 
-            // textBox3
+            // tbObrigacoes
             // 
-            textBox3.Location = new Point(16, 225);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(264, 166);
-            textBox3.TabIndex = 1;
+            tbObrigacoes.Location = new Point(16, 225);
+            tbObrigacoes.Multiline = true;
+            tbObrigacoes.Name = "tbObrigacoes";
+            tbObrigacoes.Size = new Size(264, 166);
+            tbObrigacoes.TabIndex = 1;
             // 
             // label4
             // 
@@ -140,14 +151,6 @@
             label4.Size = new Size(67, 15);
             label4.TabIndex = 0;
             label4.Text = "Obrigações";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(21, 34);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(337, 405);
-            textBox4.TabIndex = 1;
             // 
             // label5
             // 
@@ -160,18 +163,19 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(btnBusca);
             groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(textBox3);
-            groupBox2.Controls.Add(dateTimePicker1);
-            groupBox2.Controls.Add(button3);
-            groupBox2.Controls.Add(button2);
-            groupBox2.Controls.Add(button1);
-            groupBox2.Controls.Add(comboBox1);
+            groupBox2.Controls.Add(tbObrigacoes);
+            groupBox2.Controls.Add(dtpDataCadastro);
+            groupBox2.Controls.Add(btnDeletar);
+            groupBox2.Controls.Add(btnAtualizar);
+            groupBox2.Controls.Add(btnInserir);
+            groupBox2.Controls.Add(cbStatusProjeto);
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(label3);
-            groupBox2.Controls.Add(textBox1);
+            groupBox2.Controls.Add(tbID);
             groupBox2.Controls.Add(label2);
-            groupBox2.Controls.Add(textBox2);
+            groupBox2.Controls.Add(tbNomeProjeto);
             groupBox2.Controls.Add(label1);
             groupBox2.Location = new Point(18, 22);
             groupBox2.Name = "groupBox2";
@@ -179,23 +183,32 @@
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             // 
-            // button2
+            // btnBusca
             // 
-            button2.Location = new Point(119, 416);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 3;
-            button2.Text = "Atualizar";
-            button2.UseVisualStyleBackColor = true;
+            btnBusca.Location = new Point(84, 55);
+            btnBusca.Name = "btnBusca";
+            btnBusca.Size = new Size(30, 23);
+            btnBusca.TabIndex = 6;
+            btnBusca.Text = "...";
+            btnBusca.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnDeletar
             // 
-            button3.Location = new Point(200, 416);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 3;
-            button3.Text = "Deletar";
-            button3.UseVisualStyleBackColor = true;
+            btnDeletar.Location = new Point(200, 416);
+            btnDeletar.Name = "btnDeletar";
+            btnDeletar.Size = new Size(75, 23);
+            btnDeletar.TabIndex = 3;
+            btnDeletar.Text = "Deletar";
+            btnDeletar.UseVisualStyleBackColor = true;
+            // 
+            // btnAtualizar
+            // 
+            btnAtualizar.Location = new Point(119, 416);
+            btnAtualizar.Name = "btnAtualizar";
+            btnAtualizar.Size = new Size(75, 23);
+            btnAtualizar.TabIndex = 3;
+            btnAtualizar.Text = "Atualizar";
+            btnAtualizar.UseVisualStyleBackColor = true;
             // 
             // Frm_CadastroProjeto_UC
             // 
@@ -214,21 +227,22 @@
 
         #endregion
 
-        private Button button1;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
+        private Button btnInserir;
+        private ComboBox cbStatusProjeto;
+        private TextBox tbID;
         private Label label1;
         private GroupBox groupBox1;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox tbNomeProjeto;
         private Label label3;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox4;
-        private TextBox textBox3;
+        private DateTimePicker dtpDataCadastro;
+        private TextBox tbDescritivo;
+        private TextBox tbObrigacoes;
         private Label label4;
         private Label label5;
         private GroupBox groupBox2;
-        private Button button3;
-        private Button button2;
+        private Button btnDeletar;
+        private Button btnAtualizar;
+        private Button btnBusca;
     }
 }

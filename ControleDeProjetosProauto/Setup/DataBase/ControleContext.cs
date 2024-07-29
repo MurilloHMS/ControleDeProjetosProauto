@@ -1,10 +1,5 @@
 ﻿using ControleDeProjetosProauto.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControleDeProjetosProauto.Setup.DataBase
 {
@@ -22,7 +17,6 @@ namespace ControleDeProjetosProauto.Setup.DataBase
             }
             string PathArquivo = Path.Combine(dbDiretorio, "System.db");
 
-            //_connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={PathArquivo};Initial Catalog=ControleDeValidades;Integrated Security=True;Connect Timeout=30";
             _connectionString = $"Data Source = {PathArquivo};Cache=Shared";
         }
 

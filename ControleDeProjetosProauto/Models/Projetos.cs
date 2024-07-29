@@ -15,7 +15,7 @@ namespace ControleDeProjetosProauto.Models
         [Required]
         public string PROSDESPRO { get; set; }
         [Required]
-        public char PROCSTAT { get; set; } = 'A';
+        public char PROCSTAT { get; set; } = 'I';
         public string? PROSOBRIG { get; set; }
 
     }
@@ -33,6 +33,11 @@ namespace ControleDeProjetosProauto.Models
     {
         private readonly DAL<Projetos> _dal;
 
+        public ProjetoRepository()
+        {
+            _dal = new DAL<Projetos>();
+        }
+
         public void Insert(Projetos projetos)
         {
             _dal.AdicionarRegistro(projetos);
@@ -48,7 +53,7 @@ namespace ControleDeProjetosProauto.Models
             _dal.DeletaRegistro(projetos);
         }
 
-        public Projetos GetByID(int id) 
+        public Projetos GetByID(int id)
         {
             return _dal.ObterRegistroPor(c => c.PRONID.Equals(id));
         }
@@ -58,6 +63,7 @@ namespace ControleDeProjetosProauto.Models
             return _dal.ObterRegistros();
         }
     }
+
 
     public class ProjetoService
     {

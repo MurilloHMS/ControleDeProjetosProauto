@@ -28,18 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            tabControl1 = new TabControl();
             SuspendLayout();
+            // 
+            // tabControl1
+            // 
+            tabControl1.Dock = DockStyle.Fill;
+            tabControl1.Location = new Point(0, 0);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(728, 516);
+            tabControl1.TabIndex = 0;
             // 
             // Frm_Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(728, 516);
+            Controls.Add(tabControl1);
             Name = "Frm_Home";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Controle de Projetos";
+            Load += Frm_Home_Load;
             ResumeLayout(false);
         }
 
         #endregion
+        private TabControl tabControl1;
     }
 }

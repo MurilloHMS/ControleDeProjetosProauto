@@ -61,8 +61,8 @@
             // 
             // cbStatusProjeto
             // 
+            cbStatusProjeto.DropDownStyle = ComboBoxStyle.DropDownList;
             cbStatusProjeto.FormattingEnabled = true;
-            cbStatusProjeto.Items.AddRange(new object[] { "Iniciar", "Em andamento", "Finalizado" });
             cbStatusProjeto.Location = new Point(16, 169);
             cbStatusProjeto.Name = "cbStatusProjeto";
             cbStatusProjeto.Size = new Size(264, 23);
@@ -191,6 +191,7 @@
             btnBusca.TabIndex = 6;
             btnBusca.Text = "...";
             btnBusca.UseVisualStyleBackColor = true;
+            btnBusca.Click += btnBusca_Click;
             // 
             // btnDeletar
             // 
@@ -218,6 +219,7 @@
             Controls.Add(groupBox1);
             Name = "Frm_CadastroProjeto_UC";
             Size = new Size(705, 496);
+            Load += Frm_CadastroProjeto_UC_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

@@ -13,6 +13,8 @@ namespace ControleDeProjetosProauto.Models
         [Required]
         public DateTime PRODDATCAD {  get; set; }
         [Required]
+        public DateTime PRODDATENT { get; set; }
+        [Required]
         public string PROSDESPRO { get; set; }
         [Required]
         public char PROCSTAT { get; set; } = 'I';

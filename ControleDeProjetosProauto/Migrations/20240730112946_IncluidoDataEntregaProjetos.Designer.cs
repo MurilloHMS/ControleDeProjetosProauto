@@ -3,6 +3,7 @@ using System;
 using ControleDeProjetosProauto.Setup.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ControleDeProjetosProauto.Migrations
 {
     [DbContext(typeof(ControleContext))]
-    partial class ControleContextModelSnapshot : ModelSnapshot
+    [Migration("20240730112946_IncluidoDataEntregaProjetos")]
+    partial class IncluidoDataEntregaProjetos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
